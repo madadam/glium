@@ -85,6 +85,7 @@ result to the user.
 
 */
 #![warn(missing_docs)]
+#![deny(unused_imports)]
 
 // TODO: remove these when everything is implemented
 #![allow(dead_code)]

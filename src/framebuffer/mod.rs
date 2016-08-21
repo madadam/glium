@@ -70,8 +70,6 @@ use std::rc::Rc;
 use smallvec::SmallVec;
 
 use texture::TextureAnyImage;
-use TextureExt;
-
 use backend::Facade;
 use context::Context;
 use CapabilitiesSource;
@@ -239,7 +237,7 @@ impl<'a> SimpleFrameBuffer<'a> {
 
         let attachments = fbo::FramebufferAttachments::Regular(fbo::FramebufferSpecificAttachments {
             colors: if let Some(color) = color {
-                let mut v = SmallVec::new(); v.push((0, color)); v 
+                let mut v = SmallVec::new(); v.push((0, color)); v
             } else {
                 SmallVec::new()
             },
@@ -390,7 +388,7 @@ impl<'a> MultiOutputFrameBuffer<'a> {
     pub fn with_depth_buffer<F: ?Sized, D, I, A>(facade: &F, color_attachments: I, depth: D)
                                          -> Result<MultiOutputFrameBuffer<'a>, ValidationError>
         where F: Facade,
-              D: ToDepthAttachment<'a>, 
+              D: ToDepthAttachment<'a>,
               I: IntoIterator<Item = (&'a str, A)>,
               A: ToColorAttachment<'a>,
     {

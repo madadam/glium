@@ -58,7 +58,6 @@ use std::marker::PhantomData;
 use smallvec::SmallVec;
 
 use CapabilitiesSource;
-use ContextExt;
 use GlObject;
 use TextureExt;
 
