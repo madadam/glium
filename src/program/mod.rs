@@ -1,3 +1,5 @@
+//! Program
+
 use std::fmt;
 use std::error::Error;
 use std::sync::Mutex;

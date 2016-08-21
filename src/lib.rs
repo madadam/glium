@@ -135,6 +135,7 @@ pub mod uniforms;
 pub mod vertex;
 pub mod texture;
 
+mod compatibility;
 mod context;
 mod fbo;
 mod image_format;
@@ -382,6 +383,7 @@ trait UniformsExt {
 /// for example are just passed as integers.
 ///
 /// Blocks and subroutines are not included.
+#[allow(missing_docs)]
 #[derive(Copy, Clone, Debug)]
 pub enum RawUniformValue {
     SignedInt(gl::types::GLint),
